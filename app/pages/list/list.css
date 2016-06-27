@@ -1,0 +1,11 @@
+.small-spacing {
+  margin: 2;
+}
+.medium-spacing {
+  margin: 5;
+}
+
+TextField {
+  border-width: 0.5;
+  border-color: gray;
+}

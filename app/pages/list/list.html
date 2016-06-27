@@ -1,0 +1,18 @@
+<ActionBar title="Groceries">
+  <ActionItem text="Share" (tap)="share()" android.systemIcon="ic_menu_share_holo_dark" ios.systemIcon="9" ios.position="right"></ActionItem>
+</ActionBar>
+<GridLayout rows="auto,*">
+  <GridLayout row="0" columns="*, auto" class="add-bar">
+  <TextField #groceryTextField [(ngModel)]="grocery" col="0"></TextField>
+  <Button text="Add" (tap)="add()" col="1"></Button>
+</GridLayout>
+
+<ListView [items]="groceryList" row="1" class="small-spacing">
+  <template let-item="item">
+    <GridLayout row="0" columns="*, auto" class="add-bar">
+      <Label [text]="item.name" class="medium-spacing"  col="0"></Label>
+      <Button text="x" (tap)="delete(item)" col="1"></Button>
+  </GridLayout>
+  </template>
+</ListView>
+</GridLayout>
